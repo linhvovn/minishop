@@ -1,0 +1,19 @@
+# See http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+spring:
+   main.show-banner: false
+   datasource:
+      url: jdbc:h2:file:./data/minishop
+      driverClassName: org.h2.Driver
+      username: sa
+      password: password
+   jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      show-sql: true
+      properties.hibernate.format_sql: true
+      
+      hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      
+   liquibase:
+      change-log: classpath:db/changelog/liquibase-changeLog.xml
+      
+      
