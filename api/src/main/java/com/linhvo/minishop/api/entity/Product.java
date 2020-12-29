@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.linhvo.minishop.api.entity.utils.EntityUtils.ProductStatus;
-import com.linhvo.minishop.api.entity.utils.EntityUtils.ProductType;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -49,5 +48,15 @@ public class Product extends BaseEntityImpl {
 	
 	@Enumerated(EnumType.ORDINAL)
 	private ProductType type;
+	
+	/**
+	 * 
+	 * @author linhv
+	 *
+	 */
+	public enum ProductType {
+		PRODUCT,
+		SERVICE;
+	}
 
 }
