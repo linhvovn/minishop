@@ -5,6 +5,7 @@
 	<groupId>com.linhvo.minishop</groupId>
 	<artifactId>product-mgmt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<name>Mini Shop</name>
 
@@ -74,8 +75,16 @@
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-maven-plugin</artifactId>
+			    <configuration>
+			        <layers>
+			            <enabled>true</enabled>
+			        </layers>
+			        <finalName>${project.artifactId}</finalName>
+			        <layout>JAR</layout>
+			        <mainClass>com.linhvo.minishop.product_mgmt.ProductServiceApp</mainClass>
+			    </configuration>
 			</plugin>
 		</plugins>
 	</build>
